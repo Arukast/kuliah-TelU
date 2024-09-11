@@ -1,7 +1,3 @@
-# Nama: Tb. Alta Ulil Abshor
-# NIM: 102022300301
-# Kelas: SI-47-08
-
 print('=== Sistem Manajemen Toko ===')
 
 # Fungsi penjualan ini adalah untuk melakukan penginputan barang dan jumlah barang yang ingin dijual oleh pengguna dan penghitung total harga

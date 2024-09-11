@@ -1,13 +1,10 @@
-# Tb. Alta Ulil Abshor
-
 # Tugas 1
 for i in range(0, 5):
     for j in range(0, i + 1):
-        print('*', end=' ')
-    print('\n')
-    
-    
-    
+        print("*", end=" ")
+    print("\n")
+
+
 # Tugas 2
 n = 0
 m = 0
@@ -60,5 +57,3 @@ while baris >= 1:
 
     print()
     baris -= 1
-
-# Tb. Alta Ulil Abshor

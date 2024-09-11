@@ -1,6 +1,3 @@
-# Nama: Tb. Alta Ulil Abshor
-# NIM: 102022300301
-# Soal Nomor 1
 try:
     print('=== Kalkulator BMI ===')
     def hitung_bmi(data_pasien):
