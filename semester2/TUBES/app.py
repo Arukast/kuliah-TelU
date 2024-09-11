@@ -1,10 +1,5 @@
 # Kelas: SI-47-08
-# Kelompok: 33
-# Anggota Kelompok:
-# 1. Ahmad Akmal Amran (102022300010)
-# 2. Firdaus Al hamid (102022300403)
-# 3. Josua Immanuel Natanael Pasaribu (102022300271)
-# 4. Tb. Alta Ulil Abshor (102022300301)
+# Kelompok: 33 2024
 
 import mysql.connector
 import streamlit as st

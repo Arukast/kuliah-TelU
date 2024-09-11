@@ -49,20 +49,21 @@ Petunjuk:
 2. Tentukan nilai tengah dari array yang sudah diurutkan. Jika jumlah elemennya genap, pilih elemen di posisi \(N/2\) setelah diurutkan (menggunakan indeks berbasis 0).
 
 Masalah ini menguji pemahaman Anda tentang konsep pengurutan dan pencarian nilai tengah dalam array, serta pemahaman tentang indeksasi array yang berbasis 0."""
+
+
 def soal1():
-    var = array('i', [])
+    var = array("i", [])
     n = int(input())
-    for x in [int (x) for x in input().split()]:
+    for x in [int(x) for x in input().split()]:
         var.append(x)
     a = sorted(var)
-    if n%2 == 0:
-        i = int(n/2)
-        print(a[i-1])
+    if n % 2 == 0:
+        i = int(n / 2)
+        print(a[i - 1])
     else:
-        i = int((len(var))/2)
+        i = int((len(var)) / 2)
         print(a[i])
     # print(a[:])
-
 
 
 """1. Judul Masalah: **Rotasi Array**
@@ -106,15 +107,18 @@ Penjelasan:
 Batasan:
 
 - Dalam penyelesaian masalah ini, Anda diperbolehkan menggunakan struktur kontrol dasar dan operasi pada array."""
+
+
 def soal2():
-    var = array('i', [])
-    n, k = [int (x) for x in input().split()]
-    for x in [int (x) for x in input().split()]:
+    var = array("i", [])
+    n, k = [int(x) for x in input().split()]
+    for x in [int(x) for x in input().split()]:
         var.append(x)
     for x in range(k):
         var.insert(0, var.pop(-1))
     print(var[:])
-    
+
+
 # soal2()
 
 """Judul Masalah: **Frekuensi Angka Maksimal**
@@ -154,24 +158,26 @@ Penjelasan:
 
 - Pada Contoh 1, angka 2 muncul dua kali, lebih sering dibandingkan dengan angka lainnya.
 - Pada Contoh 2, angka 3 dan 4 muncul tiga kali. Namun, karena kita memilih angka yang paling kecil dari frekuensi maksimal yang sama, jawabannya adalah 3."""
+
+
 def soal3():
-    var = array('i', [])
-    svar = array('i', [])
-    jvar = array('i', [])
-    vvar = array('i', [])
+    var = array("i", [])
+    svar = array("i", [])
+    jvar = array("i", [])
+    vvar = array("i", [])
     n = int(input())
-    for x in [int (x) for x in input().split()]:
+    for x in [int(x) for x in input().split()]:
         var.append(x)
     fre = {}
-    
+
     for element in var:
         if element in fre:
             fre[element] += 1
         else:
             fre[element] = 1
-    
-    sor = dict(sorted(fre.items(), key= lambda item: item[1], reverse= True))
-    
+
+    sor = dict(sorted(fre.items(), key=lambda item: item[1], reverse=True))
+
     for key in sor:
         # print(f"L1: {key}")
         jvar.append(key)
@@ -181,19 +187,20 @@ def soal3():
             # print(f'sor[key]: {sor[key]}')
             svar.append(key)
     frek = 0
-    for i in range(len(vvar)-1):
+    for i in range(len(vvar) - 1):
         # print(f'Loop: {i}')
-        if vvar[i] == vvar[i+1]:
-            if jvar[i] > jvar[i+1]:
-                frek = i+1
+        if vvar[i] == vvar[i + 1]:
+            if jvar[i] > jvar[i + 1]:
+                frek = i + 1
             else:
                 pass
         else:
-            pass 
+            pass
     # print(svar)
     # print(jvar)
     # print(vvar)
     print(jvar[frek])
+
 
 """**Permutasi**
 
@@ -241,23 +248,25 @@ Penjelasan:
 Zip
 """
 
+
 def soal4():
-    var0 = array('i', [])
-    var1 = array('i', [])
+    var0 = array("i", [])
+    var1 = array("i", [])
     n = int(input())
-    for x in [int (x) for x in input().split()]:
+    for x in [int(x) for x in input().split()]:
         var0.append(x)
-    for x in [int (x) for x in input().split()]:
+    for x in [int(x) for x in input().split()]:
         var1.append(x)
     vars0 = sorted(var0)
     vars1 = sorted(var1)
     for i in range(n):
         if vars0[i] == vars1[i]:
-            indikator = 'Ya'
+            indikator = "Ya"
         else:
-            indikator = 'Tidak'
+            indikator = "Tidak"
             break
     print(indikator)
+
 
 """1. Judul Masalah: **Perbandingan Kinerja Karyawan**
 
@@ -300,14 +309,15 @@ Penjelasan:
 - Pada Contoh 1, karyawan Tim A hanya memiliki skor lebih tinggi pada posisi ketiga dan kelima dibandingkan dengan Tim B, sehingga outputnya adalah 2.
 - Pada Contoh 2, tidak ada karyawan di Tim A yang memiliki skor lebih tinggi dari Tim B pada posisi yang sama, sehingga outputnya adalah 0."""
 
+
 def soal5():
-    var0 = array('i', [])
-    var1 = array('i', [])
+    var0 = array("i", [])
+    var1 = array("i", [])
     counter = 0
     n = int(input())
-    for x in [int (x) for x in input().split()]:
+    for x in [int(x) for x in input().split()]:
         var0.append(x)
-    for x in [int (x) for x in input().split()]:
+    for x in [int(x) for x in input().split()]:
         var1.append(x)
     zipped_var = zip(var0, var1)
     for x, y in zipped_var:
@@ -316,6 +326,7 @@ def soal5():
         else:
             pass
     print(counter)
+
 
 """Judul Masalah: **Persediaan Bahan Makanan**
 
@@ -358,23 +369,26 @@ Penjelasan:
 - Pada Contoh 1, untuk setiap jenis bahan makanan, jumlah yang dibeli lebih banyak atau sama dengan jumlah yang digunakan, sehingga semua jenis bahan makanan memiliki sisa 100 unit.
 - Pada Contoh 2, jenis bahan makanan kedua digunakan lebih banyak daripada yang dibeli, menghasilkan defisit sebesar 30 unit, sedangkan jenis lainnya memiliki sisa sesuai perhitungan."""
 
+
 def soal6():
-    var0 = array('i', [])
-    var1 = array('i', [])
-    var2 = array('i', [])
+    var0 = array("i", [])
+    var1 = array("i", [])
+    var2 = array("i", [])
     n = int(input())
-    for x in [int (x) for x in input().split()]:
+    for x in [int(x) for x in input().split()]:
         var0.append(x)
-    for x in [int (x) for x in input().split()]:
+    for x in [int(x) for x in input().split()]:
         var1.append(x)
     zipped_var = zip(var0, var1)
     for x, y in zipped_var:
         var2.append(y - x)
     for element in var2:
-        print(element, end=' ')
-# soal1()
+        print(element, end=" ")
+
+
+soal1()
 soal2()
-# soal3()
-# soal4()
-# soal5()
-# soal6()
+soal3()
+soal4()
+soal5()
+soal6()
